@@ -1,5 +1,7 @@
 package com.dubbo.demo.register.remote;
 
+import com.dubbo.demo.route.impl.RandomRule;
+
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -10,7 +12,7 @@ import java.util.Map;
 public class RemoteRegister {
 
     /**
-     * 本地注册表{服务名称：List<Url>}
+     * 远程注册表{服务名称：List<Url>}
      */
     public static Map<String, List<Url>> remoteMap = new HashMap<>();
 
@@ -38,8 +40,8 @@ public class RemoteRegister {
      * @param serviceName
      * @return
      */
-    public static List<Url> getService(String serviceName){
-        return remoteMap.get(serviceName);
+    public static Url getService(String serviceName){
+        return new RandomRule().doRule(serviceName);
     }
 
     /**
@@ -56,4 +58,5 @@ public class RemoteRegister {
     public static void clearService(){
         remoteMap.clear();
     }
+
 }

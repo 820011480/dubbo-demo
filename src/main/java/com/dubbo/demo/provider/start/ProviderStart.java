@@ -6,6 +6,12 @@ import com.dubbo.demo.register.local.LocalRegister;
 import com.dubbo.demo.register.remote.RemoteRegister;
 import com.dubbo.demo.register.remote.Url;
 
+/**
+ * 1. dubbo协议实现
+ * 2. 协议切换
+ *  a: 根据系统参数实用工场模式获取协议服务
+ *  b: 根据java-spi实现
+ */
 public class ProviderStart {
 
     public static void main(String[] args) {

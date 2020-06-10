@@ -1,4 +1,4 @@
-//package com.dubbo.demo.protocol.http;
+package com.dubbo.demo.protocol.dubbo;//package com.dubbo.demo.protocol.http;
 //
 //import javax.servlet.ServletException;
 //import javax.servlet.ServletRequest;
